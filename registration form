@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>student registration form</h2>
+    <form>
+        Name:
+        <br>
+        <input type="text" placeholder="Enter your name">
+        <br><br>
+        Email:
+        <br>
+        <input type="email" placeholder="Enter your email">
+        <br><br>
+        Password:
+        <br>
+        <input type="password" placeholder="Enter your password">
+        <br><br>
+        Gender:
+        <br>
+        <input type="radio" name="gender">Male
+        <br>
+        <input type="radio" name="gender">Female
+        <br>
+        <input type="radio" name="gender">others
+        <br><br>
+        Skills:
+         <br>
+        <input type="checkbox"> HTML
+        <br>
+        <input type="checkbox">CSS
+        <br>
+        <input type="checkbox">Javascript
+        <br><br>
+        Message:
+        <br>
+        <textarea rows="4" cols="30" placeholder="write your Message"></textarea>
+        <br><br>
+        <input type="submit" value="Register">
+   </form>
+</body>
+</html>
