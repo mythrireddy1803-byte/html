@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notes Sharing Platform</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+section{
+margin-top:40px;
+}
+
+input{
+padding:8px;
+margin:5px;
+}
+
+button{
+padding:8px 15px;
+background:blue;
+color:white;
+border:none;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+table,th,td{
+border:1px solid black;
+padding:10px;
+}
+</style>
+
+<script>
+
+let notes = [];
+
+function login(){
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user==="admin" && pass==="1234"){
+alert("Login Successful");
+}else{
+alert("Invalid Username or Password");
+}
+}
+
+function uploadNote(){
+let subject=document.getElementById("subject").value;
+let file=document.getElementById("file").value;
+
+notes.push({subject:subject,file:file});
+
+displayNotes();
+alert("File Uploaded");
+}
+
+function displayNotes(){
+
+let table=document.getElementById("notesTable");
+table.innerHTML="<tr><th>Subject</th><th>File</th></tr>";
+
+for(let i=0;i<notes.length;i++){
+table.innerHTML +=
+"<tr><td>"+notes[i].subject+"</td><td>"+notes[i].file+"</td></tr>";
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Notes Sharing Platform</h1>
+
+<!-- Login Page -->
+<section>
+<h2>User Authentication (Login)</h2>
+
+<input type="text" id="username" placeholder="Username"><br>
+<input type="password" id="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+</section>
+
+
+<!-- Upload Notes -->
+<section>
+
+<h2>Upload Notes</h2>
+
+<input type="text" id="subject" placeholder="Subject Name"><br>
+<input type="file" id="file"><br>
+
+<button onclick="uploadNote()">Upload</button>
+
+</section>
+
+
+<!-- Fetch Notes -->
+<section>
+
+<h2>Available Notes</h2>
+
+<table id="notesTable">
+<tr>
+<th>Subject</th>
+<th>File</th>
+</tr>
+</table>
+
+</section>
+
+</body>
+</html>
