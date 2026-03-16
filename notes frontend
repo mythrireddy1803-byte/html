@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notes Sharing Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+body{
+font-family: Arial;
+text-align: center;
+background-color:#f2f2f2;
+}
+
+nav{
+background:#333;
+padding:10px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:18px;
+}
+
+section{
+margin-top:40px;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+}
+
+table,th,td{
+border:1px solid black;
+padding:10px;
+}
+
+button{
+padding:8px 15px;
+background:blue;
+color:white;
+border:none;
+}
+<h1>Notes Sharing Platform</h1>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="login.html">Login</a>
+<a href="uplode.html">Upload Notes</a>
+<a href="notes.html">Notes List</a>
+</nav>
+
+<h2>Welcome Students</h2>
+<p>Share and Download Study Notes Easily</p>
+
+<input type="text" placeholder="Search Notes">
+<button>Search</button>
+
+</body>
+</html>
